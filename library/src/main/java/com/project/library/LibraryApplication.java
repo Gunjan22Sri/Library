@@ -1,11 +1,13 @@
 package com.project.library;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
+import org.springframework.boot.autoconfigure.web.servlet.error.ErrorMvcAutoConfiguration;
+
 
 @SpringBootApplication
-//@ComponentScan(basePackages = {"com.project.library.controller"})
+@EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class})
 public class LibraryApplication {
 
 	public static void main(String[] args) {
